@@ -5,9 +5,9 @@
 import type { Job } from '../models/Job';
 import type { JobAuditLog } from '../models/JobAuditLog';
 import type { RegisteredJob } from '../models/RegisteredJob';
-import type { CancelablePromise } from 'openapi/core/core/CancelablePromise';
-import { OpenAPI } from 'openapi/core/core/OpenAPI';
-import { request as __request } from 'openapi/core/core/request';
+import type { CancelablePromise } from 'core-fe-lib/openapi/core/core/CancelablePromise';
+import { OpenAPI } from 'core-fe-lib/openapi/core/core/OpenAPI';
+import { request as __request } from 'core-fe-lib/openapi/core/core/request';
 export class DefaultService {
     /**
      * Returns all Job audit logs from the system that the user has access to

@@ -2,10 +2,10 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export { ApiError } from 'openapi/core/core/ApiError';
-export { CancelablePromise, CancelError } from 'openapi/core/core/CancelablePromise';
-export { OpenAPI } from 'openapi/core/core/OpenAPI';
-export type { OpenAPIConfig } from 'openapi/core/core/OpenAPI';
+export { ApiError } from 'core-fe-lib/openapi/core/core/ApiError';
+export { CancelablePromise, CancelError } from 'core-fe-lib/openapi/core/core/CancelablePromise';
+export { OpenAPI } from 'core-fe-lib/openapi/core/core/OpenAPI';
+export type { OpenAPIConfig } from 'core-fe-lib/openapi/core/core/OpenAPI';
 
 export type { Job } from './models/Job';
 export type { JobAuditLog } from './models/JobAuditLog';
