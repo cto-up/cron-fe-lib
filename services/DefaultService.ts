@@ -306,38 +306,6 @@ export class DefaultService {
         });
     }
     /**
-     * Apply pending migrations
-     * @returns any Migrations applied successfully
-     * @throws ApiError
-     */
-    public static migrateUp(): CancelablePromise<any> {
-        return __request(OpenAPI, {
-            method: 'POST',
-            url: '/api/v1/cron/migrate/up',
-            errors: {
-                401: `Unauthorized`,
-                403: `Forbidden`,
-                500: `Internal server error`,
-            },
-        });
-    }
-    /**
-     * Revert last migration
-     * @returns any Migration reverted successfully
-     * @throws ApiError
-     */
-    public static migrateDown(): CancelablePromise<any> {
-        return __request(OpenAPI, {
-            method: 'POST',
-            url: '/api/v1/cron/migrate/down',
-            errors: {
-                401: `Unauthorized`,
-                403: `Forbidden`,
-                500: `Internal server error`,
-            },
-        });
-    }
-    /**
      * Seeds reference data for module
      * @returns any Reference data seeded successfully
      * @throws ApiError
