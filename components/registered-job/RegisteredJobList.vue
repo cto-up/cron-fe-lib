@@ -3,7 +3,9 @@
     <div
       class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4"
     >
-      <b-title :model-value="$t('cron.registeredJob.home.title')" />
+      <h1 class="text-2xl font-semibold tracking-tight">
+        {{ $t("cron.registeredJob.home.title") }}
+      </h1>
       <div class="flex items-center space-x-2">
         <Input v-model="filter" placeholder="Search..." class="max-w-sm" />
       </div>
