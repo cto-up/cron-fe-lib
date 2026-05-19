@@ -12,47 +12,7 @@
       </div>
     </div>
 
-    <!-- Grid view for smaller screens -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:hidden gap-4">
-      <Card
-        v-for="row in rows"
-        :key="row.id"
-        class="cursor-pointer"
-        @click="onRowSelect(row.id)"
-      >
-        <CardHeader>
-          <CardTitle>{{ row.job_name }}</CardTitle>
-          <CardDescription>{{ row.app_id }}</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div>{{ row.scheduled_time }}</div>
-          <div>{{ row.start_time }}</div>
-          <div>{{ row.end_time }}</div>
-          <div>{{ row.status }}</div>
-          <div>{{ row.output }}</div>
-          <div>{{ row.error }}</div>
-        </CardContent>
-        <CardFooter class="flex justify-end p-4">
-          <Button
-            variant="secondary"
-            @click="
-              (event: MouseEvent) => {
-                event.stopPropagation();
-                deleteJobAuditLog(row.id, row.job_name || 'audit log');
-              }
-            "
-          >
-            <Trash2 class="h-4 w-4" />
-            <span class="hidden sm:inline ml-2">{{
-              $t("actions.delete")
-            }}</span>
-          </Button>
-        </CardFooter>
-      </Card>
-    </div>
-
-    <!-- Table view for larger screens -->
-    <div class="border rounded-md hidden md:block">
+    <div class="border rounded-md overflow-x-auto">
       <Table>
         <TableHeader>
           <TableRow>
@@ -153,14 +113,6 @@ import {
   TableHeader,
   TableRow,
 } from "core-fe-lib/components-shadcn/ui/table";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from "core-fe-lib/components-shadcn/ui/card";
 import { Button } from "core-fe-lib/components-shadcn/ui/button";
 import BPagination from "core-fe-lib/components-shadcn/primitives/BPagination.vue";
 import { Loader2, Trash2 } from "lucide-vue-next";
