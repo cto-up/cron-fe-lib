@@ -107,7 +107,12 @@
 <script lang="ts" setup>
 import { onMounted } from "vue";
 import { useRegisteredJob } from "./composables/useRegisteredJob";
-import { Card, CardContent, CardHeader, CardTitle } from "core-fe-lib/components-shadcn/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "core-fe-lib/components-shadcn/ui/card";
 import { Badge } from "core-fe-lib/components-shadcn/ui/badge";
 
 const { registeredJob, loading, fetchRegisteredJob } = useRegisteredJob();

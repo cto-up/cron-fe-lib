@@ -8,7 +8,8 @@ export function cronRoutes(MainLayout: Component): RouteRecordRaw {
     children: [
       {
         path: "",
-        component: () => import("core-fe-lib/components-shadcn/layouts/PassthroughLayout.vue"),
+        component: () =>
+          import("core-fe-lib/components-shadcn/layouts/PassthroughLayout.vue"),
         children: [
           {
             path: "job-audit-logs",
