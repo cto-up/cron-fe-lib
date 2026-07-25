@@ -50,7 +50,8 @@ export default {
     actions: {
       delete: {
         label: "Eliminar",
-        confirm: "¿Seguro que quieres eliminar el registro de auditoría de la tarea %{name}?",
+        confirm:
+          "¿Seguro que quieres eliminar el registro de auditoría de la tarea %{name}?",
       },
       deleteLog: "Eliminar registro de auditoría",
     },

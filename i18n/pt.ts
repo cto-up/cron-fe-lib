@@ -22,7 +22,8 @@ export default {
     actions: {
       delete: {
         label: "Eliminar",
-        confirm: "Tem a certeza de que pretende eliminar a tarefa registada %{name}?",
+        confirm:
+          "Tem a certeza de que pretende eliminar a tarefa registada %{name}?",
       },
       viewAuditLogs: "Ver registos de auditoria",
     },
@@ -50,7 +51,8 @@ export default {
     actions: {
       delete: {
         label: "Eliminar",
-        confirm: "Tem a certeza de que pretende eliminar o registo de auditoria da tarefa %{name}?",
+        confirm:
+          "Tem a certeza de que pretende eliminar o registo de auditoria da tarefa %{name}?",
       },
       deleteLog: "Eliminar registo de auditoria",
     },

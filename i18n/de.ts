@@ -50,7 +50,8 @@ export default {
     actions: {
       delete: {
         label: "Löschen",
-        confirm: "Möchten Sie das Job-Audit-Protokoll %{name} wirklich löschen?",
+        confirm:
+          "Möchten Sie das Job-Audit-Protokoll %{name} wirklich löschen?",
       },
       deleteLog: "Audit-Protokoll löschen",
     },
