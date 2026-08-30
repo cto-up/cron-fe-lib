@@ -11,9 +11,9 @@
             <Input
               id="name"
               v-model="job.name"
-              :class="{ 'border-destructive': (v$ as any).name.$error }"
+              :class="{ 'border-error': (v$ as any).name.$error }"
             />
-            <p v-if="(v$ as any).name.$error" class="text-sm text-destructive">
+            <p v-if="(v$ as any).name.$error" class="text-sm text-error">
               Field required
             </p>
           </div>
@@ -23,12 +23,9 @@
             <Input
               id="status"
               v-model="job.status"
-              :class="{ 'border-destructive': (v$ as any).status.$error }"
+              :class="{ 'border-error': (v$ as any).status.$error }"
             />
-            <p
-              v-if="(v$ as any).status.$error"
-              class="text-sm text-destructive"
-            >
+            <p v-if="(v$ as any).status.$error" class="text-sm text-error">
               Field required
             </p>
           </div>
