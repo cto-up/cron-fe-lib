@@ -56,7 +56,7 @@
                   @click="
                     (event: MouseEvent) => {
                       event.stopPropagation();
-                      deleteJobAuditLog(row.id, row.name);
+                      deleteJobAuditLog(row.id, row.job_name);
                     }
                   "
                 >
@@ -278,7 +278,7 @@ const deleteJobAuditLog = (id: string, name: string) => {
         message: t("cron.jobAuditLog.actions.delete.success", { name: name }),
       });
     })
-    .catch((err: any) => {
+    .catch((err: Error | unknown) => {
       handleError(err);
     });
 };
