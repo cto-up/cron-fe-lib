@@ -36,8 +36,8 @@
             <TableRow
               v-for="row in rows"
               :key="row.id"
-              class="cursor-pointer"
-              @click="onRowSelect(row.id)"
+              clickable
+              @activate="onRowSelect(row.id)"
             >
               <TableCell>{{ row.name }}</TableCell>
               <TableCell>{{ row.status }}</TableCell>
@@ -238,7 +238,7 @@ const deleteJob = (id: string, name: string) => {
         message: t("cron.job.actions.delete.success", { name: name }),
       });
     })
-    .catch((err: any) => {
+    .catch((err: unknown) => {
       handleError(err);
     });
 };

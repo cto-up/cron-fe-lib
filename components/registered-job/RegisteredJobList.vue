@@ -36,8 +36,8 @@
             <TableRow
               v-for="row in rows"
               :key="row.id"
-              class="cursor-pointer"
-              @click="onRowSelect(row.id)"
+              clickable
+              @activate="onRowSelect(row.id)"
             >
               <TableCell>{{ row.job_name }}</TableCell>
               <TableCell>{{ row.schedule }}</TableCell>
@@ -253,7 +253,7 @@ const toggleJobEnabled = (id: string, isEnabled: boolean) => {
       });
       onRequest({ getCellValue, pagination: pagination.value });
     })
-    .catch((err: any) => {
+    .catch((err: unknown) => {
       handleError(err);
     })
     .finally(() => {

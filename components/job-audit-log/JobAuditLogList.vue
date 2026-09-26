@@ -36,8 +36,8 @@
             <TableRow
               v-for="row in rows"
               :key="row.id"
-              class="cursor-pointer"
-              @click="onRowSelect(row.id)"
+              clickable
+              @activate="onRowSelect(row.id)"
             >
               <TableCell>{{ row.app_id }}</TableCell>
               <TableCell>{{ row.request_id }}</TableCell>
