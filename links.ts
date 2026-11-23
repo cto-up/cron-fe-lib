@@ -2,7 +2,10 @@ import { type MenuLink } from "core-fe-lib/components-shadcn/types/menu-link";
 
 import { Role } from "core-fe-lib/openapi/core/models/Role";
 
-export function getCronLinks(t: any, icon: string = "book"): MenuLink[] {
+export function getCronLinks(
+  t: (key: string) => string,
+  icon: string = "book"
+): MenuLink[] {
   return [
     {
       title: t("layout.navigation.cron.title"),

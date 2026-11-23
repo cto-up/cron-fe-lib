@@ -115,7 +115,7 @@ import {
 } from "core-fe-lib/components-shadcn/ui/card";
 import { Badge } from "core-fe-lib/components-shadcn/ui/badge";
 
-const { registeredJob, loading, fetchRegisteredJob } = useRegisteredJob();
+const { registeredJob, fetchRegisteredJob } = useRegisteredJob();
 
 onMounted(async () => {
   await fetchRegisteredJob();
